@@ -1,0 +1,551 @@
+@font-face {
+  font-family: "Muller Medium";
+  src: url("../fonts/MullerMedium.woff");
+  src: url("../fonts/MullerMedium.woff2") format("woff2"),
+    url("../fonts/MullerMedium.woff") format("woff");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Muller Bold";
+  src: url("../fonts/MullerBold.woff");
+  src: url("../fonts/MullerBold.woff2") format("woff2"),
+    url("../fonts/MullerBold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Muller Regular";
+  src: url("../fonts/MullerRegular.woff");
+  src: url("../fonts/MullerRegular.woff2") format("woff2"),
+    url("../fonts/MullerRegular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+  --color-yellow: #ffd023;
+  --color-limon: #fff024;
+  --link-transition: color 0.3s ease;
+}
+
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: "Muller Bold", "sans-serif";
+  color: var(--color-yellow);
+}
+
+ul,
+li {
+  margin: 0;
+  font-family: "Muller Regular", "sans-serif";
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: "Muller Medium", "sans-serif";
+  letter-spacing: 1px;
+}
+
+body {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  font-family: "Muller Regular", "sans-serif";
+  color: #fff;
+  letter-spacing: 1px;
+  line-height: 22px;
+}
+
+section {
+  background-color: #282828;
+  padding: 50px 0;
+}
+
+section:nth-child(2n) {
+  background-color: #181a1f;
+}
+
+.container,
+.services-container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 60px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+
+
+/* HEADER */
+
+.header {
+  background-color: #181a1f;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.nav__sections {
+  margin-left: auto;
+}
+
+.nav__section {
+  color: #fff;
+  font-size: 18px;
+  transition: var(--link-transition);
+}
+
+.nav__section:hover {
+  color: var(--color-yellow);
+}
+
+.nav__section:not(:last-child) {
+  margin-right: 30px;
+}
+
+
+
+/* SUMMARY SERVICES */
+
+.summary-services {
+  background-color: #282828;
+  background-image: url('../img/summary-img.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 200px 0 70px;
+}
+
+.summary-wrapper {
+  max-width: 50%;
+}
+
+.summary-wrapper__title {
+  font-size: 80px;
+  margin-bottom: 36px;
+  letter-spacing: 2px;
+}
+
+.summary-wrapper__desc {
+  font-size: 20px;
+  letter-spacing: 2px;
+  line-height: 22px;
+}
+
+
+/* SERVICES */
+
+.services-block__icon {
+  width: 450px;
+}
+
+.services__block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.services-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.services-wrapper.reverse {
+  flex-direction: row-reverse;
+}
+
+.services__block:nth-child(2n) {
+  background-color: #282828;
+}
+
+.services-block__item {
+  max-width: calc(60% - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.services-item__title {
+  font-size: 36px;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+/* CONTACT US */
+
+.form__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.form-block-left {
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+}
+
+.form-input {
+  background: #161617;
+  color: #fafafa;
+  transition: .2s ease-in-out;
+  transition-property: color, background-color, border-color, box-shadow;
+  border-radius: 4px;
+  font-size: 17px;
+  font-family: "Muller Regular", "sans-serif";
+  outline: none;
+  border: none;
+}
+
+.form-input:focus {
+  outline: 0;
+  background-color: #0e0f0f;
+  color: #fafafa;
+}
+
+.form-input:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.form-block-right__input {
+  height: 100%;
+  width: 700px;
+  padding: 7px 10px;
+  resize: none;
+}
+
+.form-block-left__input {
+  padding: 10px;
+}
+
+.contacts__form label {
+  font-size: 17px;
+  color: #fff;
+  font-family: "Muller Regular", "sans-serif";
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.privacy {
+  color: var(--color-yellow);
+  transition: var(--link-transition);
+}
+
+.privacy:hover {
+  color: var(--color-limon);
+}
+
+.form__req-fields span {
+  color: var(--color-yellow);
+}
+
+.form__req-fields {
+  margin-bottom: 15px;
+}
+
+.form__btns button {
+  background-color: var(--color-yellow);
+  border: 1px solid var(--color-yellow);
+  padding: 15px 20px;
+  font-size: 17px;
+  font-family: "Muller Regular", "sans-serif";
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.form__btns>button:hover {
+  background: var(--color-limon);
+}
+
+
+
+
+
+
+/* FOOTER */
+
+.footer {
+  background-color: #181a1f;
+  padding: 40px 0;
+}
+
+.footer-wrapper {
+  max-width: 670px;
+}
+
+.footer-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-title {
+  color: #fff;
+  font-family: "Muller Medium", "sans-serif";
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+.footer-desc {
+  color: #a1a0ad;
+  line-height: 22px;
+  letter-spacing: 1px;
+}
+
+.footer-link {
+  color: var(--color-yellow);
+  transition: var(--link-transition);
+}
+
+.footer-link:hover {
+  color: var(--color-limon);
+}
+
+.footer-link:not(:last-child) {
+  margin-right: 18px;
+}
+
+.footer-networks {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.footer-network {
+  fill: #898989;
+}
+
+.footer-network:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-block-lk {
+  margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+/* LEGAL AGREEMENT AND PRIVACY POLICY HTML */
+
+.mini-container {
+  max-width: 780px;
+}
+
+.agreement__title,
+.policy__title {
+  font-size: 44px;
+  padding-top: 140px;
+  margin-bottom: 20px;
+}
+
+.agreement__sub-title,
+.policy__sub-title {
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+.agreement__mini-title,
+.policy__mini-title {
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.agreement__link,
+.policy__link {
+  color: var(--color-yellow);
+  transition: var(--link-transition);
+}
+
+.agreement__link:hover,
+.policy__link:hover {
+  color: var(--color-limon);
+}
+
+.agreement__desc,
+.policy__desc {
+  margin-bottom: 20px;
+}
+
+.agreement-list,
+.policy-list {
+  margin-bottom: 20px;
+}
+
+.agreement-list__item,
+.policy-list__item {
+  letter-spacing: 1px;
+  line-height: 22px;
+}
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1200px) {
+
+  .container,
+  .services-container {
+    max-width: 1140px;
+  }
+
+  section,
+  .header,
+  .footer {
+    width: 1140px;
+  }
+
+}
+
+@media screen and (max-width: 992px) {
+
+  .container,
+  .services-container {
+    width: 960px;
+  }
+
+  section,
+  .header,
+  .footer {
+    width: 992px;
+  }
+
+  .form-block-right__input {
+    width: 500px;
+  }
+
+  .summary-wrapper {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .container,
+  .services-container {
+    max-width: 720px;
+  }
+
+  section,
+  .header,
+  .footer {
+    width: 720px;
+  }
+
+  .services-block__icon {
+    width: 40%;
+  }
+
+  .services-wrapper {
+    align-items: center;
+  }
+
+  .form__wrapper {
+    flex-wrap: wrap;
+  }
+
+  .form-block-left {
+    min-width: 100%;
+  }
+
+  .form-input:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .form-input {
+    margin-bottom: 15px !important;
+  }
+
+  .form__block-right {
+    width: 100%;
+  }
+
+  .form-block-right__input {
+    width: 100%;
+  }
+
+  .footer-link:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .footer-link:first-child{
+    margin-bottom: 7px;
+  }
+
+  .footer-link {
+    margin-left: auto;
+  }
+
+  .footer-block-lk {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+
+
+
+}
+
+@media screen and (max-width: 576px) {
+
+  .container,
+  .services-container {
+    max-width: 540px;
+  }
+
+  section,
+  .header,
+  .footer {
+    width: 576px;
+  }
+}
