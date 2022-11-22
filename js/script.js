@@ -1,3 +1,4 @@
+// SMOOTH SCROLL
 const menuLinks = document.querySelectorAll('.nav__section'),
   header = document.querySelector('.header');
 
@@ -26,16 +27,19 @@ for (let i = 0; i < menuLinks.length; i++) {
 const burger = document.querySelector('.nav__button');
 const menu = document.querySelector('.nav__sections');
 const linksBurger = document.querySelectorAll('.nav__section');
+const bodyColor = document.querySelector('.body-color')
 
 burger.addEventListener('click', () => {
   burger.classList.toggle('active');
   menu.classList.toggle('active');
+  bodyColor.classList.toggle('active');
 })
 
-linksBurger.forEach(function(el){
+linksBurger.forEach(function (el) {
   el.addEventListener('click', () => {
-    burger.classList.remove('active')
-    menu.classList.remove('active')
+    burger.classList.remove('active');
+    menu.classList.remove('active');
+    bodyColor.classList.remove('active');
   })
 })
 

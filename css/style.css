@@ -72,6 +72,10 @@ body {
   background-color: #181a1f;
 }
 
+body.body-color.active{
+  background-color: #000;
+}
+
 p {
   margin: 0;
   font-family: "Muller Regular", "sans-serif";
