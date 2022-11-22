@@ -28,7 +28,7 @@
 :root {
   --color-yellow: #ffd023;
   --color-limon: #fff024;
-  --link-transition: color 0.3s ease;
+  --link-transition: all .3s ease;
 }
 
 
@@ -105,10 +105,31 @@ section:nth-child(2n) {
 
 .services-item__title,
 .about__title,
-.contacts__title{
+.contacts__title {
   font-size: 42px;
   margin-bottom: 30px;
   letter-spacing: 1px;
+}
+
+
+.link-effect{
+  position: relative;
+}
+
+.link-effect::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 100%;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transition: transform .3s ease;
+}
+
+.link-effect:hover::before{
+  transform: scaleX(1);
 }
 
 
@@ -150,7 +171,6 @@ section:nth-child(2n) {
 .nav__section:not(:last-child) {
   margin-right: 30px;
 }
-
 
 
 /* SUMMARY SERVICES */
@@ -306,7 +326,6 @@ section:nth-child(2n) {
 .privacy:hover {
   color: var(--color-limon);
 }
-
 .form__req-fields span {
   color: var(--color-yellow);
 }
@@ -385,7 +404,12 @@ section:nth-child(2n) {
 }
 
 .footer-network {
-  fill: #898989;
+  color: #898989;
+  transition: color .3s ease;
+}
+
+.footer-network:hover{
+  color: var(--color-yellow);
 }
 
 .footer-network:not(:last-child) {
@@ -457,5 +481,3 @@ section:nth-child(2n) {
   letter-spacing: 1px;
   line-height: 22px;
 }
-
-
