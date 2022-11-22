@@ -148,6 +148,13 @@ section:nth-child(2n) {
   z-index: 100;
 }
 
+.nav__button{
+  background-color: transparent;
+  border: none;
+  display: none;
+  padding: 0;
+}
+
 .header__nav {
   display: flex;
   align-items: center;

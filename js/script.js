@@ -20,3 +20,23 @@ for (let i = 0; i < menuLinks.length; i++) {
     });
   });
 }
+
+
+// BURGER
+const burger = document.querySelector('.nav__button');
+const menu = document.querySelector('.nav__sections');
+const linksBurger = document.querySelectorAll('.nav__section');
+
+burger.addEventListener('click', () => {
+  burger.classList.toggle('active');
+  menu.classList.toggle('active');
+})
+
+linksBurger.forEach(function(el){
+  el.addEventListener('click', () => {
+    burger.classList.remove('active')
+    menu.classList.remove('active')
+  })
+})
+
+
